@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
-
-	//"os"
 	"os/exec"
 	"strings"
 	"time"
@@ -15,7 +13,7 @@ import (
 )
 
 var path string 
-var id string = "ApplicationID"
+var id string = "ApplicationID" //rich presence application ID
 var Title string
 var URL string
 var chromeOpen bool = false
@@ -84,7 +82,7 @@ func Ticker() {
 	}
 }
 
-func IsXboxTab() bool {
+func IsXboxTab() bool { //whether there is an xbox tab open
 	tabs, _ := remote.TabList("")
 	    for _, element := range tabs {
 	        if(strings.Contains(strings.ToLower(element.URL), "xbox")) {
@@ -97,7 +95,7 @@ func IsXboxTab() bool {
 		return false
 }
 
-func SetActivity(state string) {
+func SetActivity(state string) { //change presence 
 	status = state
 	now := time.Now()
 	err := client.SetActivity(client.Activity{
@@ -115,7 +113,7 @@ func SetActivity(state string) {
 	}
 }
 
-func Update() {
+func Update() { //check status of the open xbox tab
 //7 conditions
 println(Title)
 println(URL)
