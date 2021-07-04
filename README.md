@@ -6,3 +6,6 @@ Using Raff's [godet](https://github.com/raff/godet) Remote client for Chrome Dev
 You only have to run the executable and it will automatically open the xbox cloud website.
 Add the path to your chrome browser into browser.txt if your chrome executable is not in it's default path.
 
+#Dependencies:
+"https://github.com/raff/godet"
+"https://github.com/hugolgst/rich-go/client"
