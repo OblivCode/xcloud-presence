@@ -14,9 +14,8 @@ import (
 	"github.com/raff/godet"
 )
 
-//var os.Args[1]
 var path string 
-var id string = "750690488809422933"
+var id string = "ApplicationID"
 var Title string
 var URL string
 var chromeOpen bool = false
@@ -104,7 +103,7 @@ func SetActivity(state string) {
 	err := client.SetActivity(client.Activity{
 		State:      state,
 		Details:    "Xbox Cloud Gaming",
-		LargeImage: "xboxlogo",
+		LargeImage: "LargeAssetID",
 		LargeText:  "OblivCode",
 		Timestamps: &client.Timestamps{
 			Start: &now,
