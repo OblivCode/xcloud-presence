@@ -12,7 +12,7 @@ import (
 )
 var path, Title, URL, status string
 var port = "9222"
-var id string = "750690488809422933"
+var id string = "APPLICATION_ID"
 var chromeOpen bool = false
 var remote *godet.RemoteDebugger
 var tickerDuration time.Duration = 1 * time.Second
